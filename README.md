@@ -10,12 +10,16 @@
 
 ***La solución consiste en tener un arreglo de RLock, que representarán los palillos y la estrategia consiste en tomar el palillo de la izquierda, y revisar si está disponible el de la derecha, si este es el caso, entonces se toma el de la derecha y se empieza a comer.***
 
-El código principal para esta lógica es el siguiente:
-
+**El código principal para esta lógica es el siguiente:**
+<p>  
 palillo_izq.acquire()
-
+<p/> 
+<p> 
 if palillo_der.acquire(blocking=False):
     return True
+<p/>
+<p>  
 else:
     palillo_izq.release()
     return False
+<p/> 
